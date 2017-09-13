@@ -27,24 +27,6 @@ public interface GestorAlumnos {
 
     /**
      * 
-     * @param arrDatos
-     * @param arrNomCampos
-     * @return
-     *     returns boolean
-     */
-    @WebMethod(operationName = "AltaAlumnos")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "AltaAlumnos", targetNamespace = "http://serviciosweb/", className = "serviciosweb.AltaAlumnos")
-    @ResponseWrapper(localName = "AltaAlumnosResponse", targetNamespace = "http://serviciosweb/", className = "serviciosweb.AltaAlumnosResponse")
-    @Action(input = "http://serviciosweb/GestorAlumnos/AltaAlumnosRequest", output = "http://serviciosweb/GestorAlumnos/AltaAlumnosResponse")
-    public boolean altaAlumnos(
-        @WebParam(name = "arr_nomCampos", targetNamespace = "")
-        List<String> arrNomCampos,
-        @WebParam(name = "arr_datos", targetNamespace = "")
-        List<String> arrDatos);
-
-    /**
-     * 
      * @return
      *     returns boolean
      */
@@ -78,5 +60,23 @@ public interface GestorAlumnos {
         String apPaterno,
         @WebParam(name = "apMaterno", targetNamespace = "")
         String apMaterno);
+
+    /**
+     * 
+     * @param arrDatos
+     * @param arrNomCampos
+     * @return
+     *     returns boolean
+     */
+    @WebMethod(operationName = "AltaAlumnos")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "AltaAlumnos", targetNamespace = "http://serviciosweb/", className = "serviciosweb.AltaAlumnos")
+    @ResponseWrapper(localName = "AltaAlumnosResponse", targetNamespace = "http://serviciosweb/", className = "serviciosweb.AltaAlumnosResponse")
+    @Action(input = "http://serviciosweb/GestorAlumnos/AltaAlumnosRequest", output = "http://serviciosweb/GestorAlumnos/AltaAlumnosResponse")
+    public boolean altaAlumnos(
+        @WebParam(name = "arr_nomCampos", targetNamespace = "")
+        List<String> arrNomCampos,
+        @WebParam(name = "arr_datos", targetNamespace = "")
+        List<String> arrDatos);
 
 }

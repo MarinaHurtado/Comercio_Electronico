@@ -4,6 +4,12 @@
 <xsd:import namespace="http://serviciosweb/" schemaLocation="http://localhost:8080/EscBaileWeb/GestorAlumnos?xsd=1"/>
 </xsd:schema>
 </types>
+<message name="AltaAlumnos">
+<part name="parameters" element="tns:AltaAlumnos"/>
+</message>
+<message name="AltaAlumnosResponse">
+<part name="parameters" element="tns:AltaAlumnosResponse"/>
+</message>
 <message name="AltaAlumno">
 <part name="parameters" element="tns:AltaAlumno"/>
 </message>
@@ -16,13 +22,11 @@
 <message name="AgregaAlumnoResponse">
 <part name="parameters" element="tns:AgregaAlumnoResponse"/>
 </message>
-<message name="AltaAlumnos">
-<part name="parameters" element="tns:AltaAlumnos"/>
-</message>
-<message name="AltaAlumnosResponse">
-<part name="parameters" element="tns:AltaAlumnosResponse"/>
-</message>
 <portType name="GestorAlumnos">
+<operation name="AltaAlumnos">
+<input wsam:Action="http://serviciosweb/GestorAlumnos/AltaAlumnosRequest" message="tns:AltaAlumnos"/>
+<output wsam:Action="http://serviciosweb/GestorAlumnos/AltaAlumnosResponse" message="tns:AltaAlumnosResponse"/>
+</operation>
 <operation name="AltaAlumno">
 <input wsam:Action="http://serviciosweb/GestorAlumnos/AltaAlumnoRequest" message="tns:AltaAlumno"/>
 <output wsam:Action="http://serviciosweb/GestorAlumnos/AltaAlumnoResponse" message="tns:AltaAlumnoResponse"/>
@@ -31,13 +35,18 @@
 <input wsam:Action="http://serviciosweb/GestorAlumnos/AgregaAlumnoRequest" message="tns:AgregaAlumno"/>
 <output wsam:Action="http://serviciosweb/GestorAlumnos/AgregaAlumnoResponse" message="tns:AgregaAlumnoResponse"/>
 </operation>
-<operation name="AltaAlumnos">
-<input wsam:Action="http://serviciosweb/GestorAlumnos/AltaAlumnosRequest" message="tns:AltaAlumnos"/>
-<output wsam:Action="http://serviciosweb/GestorAlumnos/AltaAlumnosResponse" message="tns:AltaAlumnosResponse"/>
-</operation>
 </portType>
 <binding name="GestorAlumnosPortBinding" type="tns:GestorAlumnos">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<operation name="AltaAlumnos">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
 <operation name="AltaAlumno">
 <soap:operation soapAction=""/>
 <input>
@@ -48,15 +57,6 @@
 </output>
 </operation>
 <operation name="AgregaAlumno">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="AltaAlumnos">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

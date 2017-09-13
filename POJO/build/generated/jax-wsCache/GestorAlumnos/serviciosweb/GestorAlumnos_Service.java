@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "GestorAlumnos", targetNamespace = "http://serviciosweb/", wsdlLocation = "http://localhost:8080/EscBaileWeb/GestorAlumnos?wsdl")
+@WebServiceClient(name = "GestorAlumnos", targetNamespace = "http://serviciosweb/", wsdlLocation = "http://148.205.133.43:8080/EscBaileWeb/GestorAlumnos?wsdl")
 public class GestorAlumnos_Service
     extends Service
 {
@@ -30,7 +30,7 @@ public class GestorAlumnos_Service
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:8080/EscBaileWeb/GestorAlumnos?wsdl");
+            url = new URL("http://148.205.133.43:8080/EscBaileWeb/GestorAlumnos?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

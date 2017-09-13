@@ -19,7 +19,7 @@
     <target name="wsimport-client-GestorAlumnos" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/GestorAlumnos"/>
         <property name="wsdl-GestorAlumnos" location="xml-resources/web-service-references/GestorAlumnos/wsdl/localhost_8080/EscBaileWeb/GestorAlumnos.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/GestorAlumnos" destdir="${build.generated.dir}/jax-wsCache/GestorAlumnos" wsdl="${wsdl-GestorAlumnos}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/EscBaileWeb/GestorAlumnos?wsdl" xnocompile="true" xendorsed="true">
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/GestorAlumnos" destdir="${build.generated.dir}/jax-wsCache/GestorAlumnos" wsdl="${wsdl-GestorAlumnos}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://148.205.133.43:8080/EscBaileWeb/GestorAlumnos?wsdl" xnocompile="true" xendorsed="true">
             <depends file="${wsdl-GestorAlumnos}"/>
             <produces dir="${build.generated.dir}/jax-wsCache/GestorAlumnos"/>
         </wsimport>
