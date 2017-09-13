@@ -42,7 +42,7 @@ public class ClsConexion
             //con = DriverManager.getConnection( "jdbc:odbc:" + 
             //                                    strDSN, "", "");
             Class.forName("net.ucanaccess.jdbc.UcanaccessDriver"); /* often not required for Java 6 and later (JDBC 4.x) */
-            con = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\sdist\\Documents\\Comercio_Electronico\\2017_03_SCE\\EscBaileWeb\\" + this.strNomDB);  
+            con = DriverManager.getConnection("jdbc:ucanaccess://C://Users//sdist//Documents//Comercio_Electronico//EscBaileWeb/" + this.strNomDB);  
             //con = DriverManager.getConnection("jdbc:ucanaccess://"+ this.strNomDB); 
             
             // Si todo va bien, verifica el unID y unPwd

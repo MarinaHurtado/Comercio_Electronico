@@ -4,6 +4,9 @@
     <service name="EscuelaBaileWS">
       <implementation-class>escdebaile.EscuelaBaileWS</implementation-class>
     </service>
+    <service name="GestorAlumnos">
+      <implementation-class>serviciosweb.GestorAlumnos</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>
